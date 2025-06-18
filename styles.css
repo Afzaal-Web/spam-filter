@@ -1,0 +1,120 @@
+/* Reset and box model */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --primary-color: #0077ff;
+  --primary-light: #e6f0ff;
+  --text-color: #333;
+  --bg-color: #f4f7fa;
+  --white: #ffffff;
+  --input-bg: #fdfdfd;
+  --input-border: #ccc;
+  --shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  --highlight: #004ecb;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  padding: 2rem;
+}
+
+/* Header Section */
+.main-text {
+  margin-bottom: 2rem;
+}
+
+.title {
+  font-size: 2.8rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-color);
+}
+
+.description {
+  font-size: 1.25rem;
+  color: #555;
+}
+
+/* Main Section */
+main {
+  background-color: var(--white);
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: var(--shadow);
+  max-width: 600px;
+  margin: 0 auto;
+  transition: background-color 0.3s ease;
+}
+
+.message-label {
+  display: block;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--highlight);
+}
+
+/* Textarea */
+textarea {
+  width: 100%;
+  max-width: 100%;
+  font-size: 1.1rem;
+  padding: 1rem;
+  border-radius: 10px;
+  border: 1px solid var(--input-border);
+  resize: vertical;
+  background-color: var(--input-bg);
+  color: var(--text-color);
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
+  transition: border-color 0.3s ease;
+}
+
+textarea:focus {
+  outline: none;
+  border: 2px solid var(--primary-color);
+}
+
+/* Button */
+.btn {
+  display: inline-block;
+  cursor: pointer;
+  width: 60%;
+  max-width: 200px;
+  padding: 0.8rem 1rem;
+  margin: 1.5rem auto 0;
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--white);
+  background: var(--primary-color);
+  border: none;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+  background: var(--highlight);
+  transform: scale(1.03);
+}
+
+/* Result text */
+#result {
+  font-size: 1.6rem;
+  margin: 1.5rem 0;
+  color: var(--primary-color);
+}
+
+/* Footer */
+.footer {
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: #999;
+}
